@@ -10,6 +10,8 @@ ___
 Filtering, Journal of the American Statistical Association, 110:512, 1591-1606, DOI:
 10.1080/01621459.2014.983520 
 
+https://doi.org/10.1080/01621459.2014.983520
+
 
 This project implements robust and bootstrap particle filters for gas trading volume data analysis, along with parameter estimation methods. The project compares standard and robust particle filtering approaches on simulated (clean and contaminated) and real gas trading volume data.
 
