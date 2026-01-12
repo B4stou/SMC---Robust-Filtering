@@ -146,7 +146,7 @@ def plot_results_comparison(data_test, result_pf, result_robpf):
     print("=" * 60)
     print(f"\n{'Metric':<20} {'Standard PF':<20} {'Robust PF':<20}")
     print("-" * 60)
-    print(f"{'R² Score':<20} {result_pf['r2']:<20.4f} {result_robpf['r2']:<20.4f}")
+    print(f"{'R² Score (sklearn)':<20} {result_pf['r2']:<20.4f} {result_robpf['r2']:<20.4f}")
     print(f"{'MSE':<20} {result_pf['mse']:<20.2f} {result_robpf['mse']:<20.2f}")
     print(f"{'MAE':<20} {result_pf['mae']:<20.2f} {result_robpf['mae']:<20.2f}")
     print("=" * 60)
@@ -202,11 +202,13 @@ def plot_result_regression_comparison(data_test, result_pf, result_robpf):
     print(f"Equation : Actual = {intercept_pf:.4f} + {slope_pf:.4f} * Predicted")
     print(f"Slope (Beta)  : {slope_pf:.4f}  (Ideal target = 1.0)")
     print(f"Bias (Alpha) : {intercept_pf:.4f}  (Ideal target = 0.0)")
+    print(f"r² Score : {r_value_pf**2:.4f}")
 
     print("\nROBUST PF:")
     print(f"Equation : Actual = {intercept_robpf:.4f} + {slope_robpf:.4f} * Predicted")
     print(f"Slope (Beta)  : {slope_robpf:.4f}  (Ideal target = 1.0)")
     print(f"Bias (Alpha) : {intercept_robpf:.4f}  (Ideal target = 0.0)")
+    print(f"r² Score : {r_value_robpf**2:.4f}")
     print("=" * 60)
 
     fig, axes = plt.subplots(1, 2, figsize=(16, 7))
